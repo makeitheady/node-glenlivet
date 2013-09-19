@@ -1,0 +1,29 @@
+{
+  "name": "prolific-glenlivet",
+  "version": "0.0.1",
+  "description": "A library that turns websites into data sources.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "node-prolific-cache": "git+ssh://git@bitbucket.org:prolificinteractive/node-prolific-cache.git#master",
+    "should": "~1.2.2",
+    "mocha": "~1.12.1",
+    "express": "~3.4.0"
+  },
+  "dependencies": {
+    "request": "~2.27.0",
+    "underscore": "~1.5.2",
+    "MD5": "~1.1.0",
+    "cheerio": "~0.12.2",
+    "jsdom": "~0.8.4"
+  }
+}
