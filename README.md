@@ -9,3 +9,7 @@ A library that turns websites into data sources.
 - Caching
 - Automatic integration tests
 - Proxying
+
+##Instructions
+
+1. Run 'npm install'.
