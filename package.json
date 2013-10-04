@@ -14,7 +14,7 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "node-prolific-cache": "git+ssh://git@bitbucket.org:prolificinteractive/node-prolific-cache.git#master",
+    "prolific-cache": "git+ssh://git@bitbucket.org:prolificinteractive/node-prolific-cache.git#master",
     "should": "~1.2.2",
     "mocha": "~1.12.1",
     "express": "~3.4.0"
