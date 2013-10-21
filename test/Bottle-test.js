@@ -79,7 +79,7 @@ describe('Bottle', function () {
             });
             
             server.listen(PORT, function () {            
-                bottle.serve(function (request, response) {
+                bottle.serve(function (err, request, response) {
                     server.close();
                     should.equal(response.error, null);
                     response.body.should.equal(BODY);
@@ -177,7 +177,7 @@ describe('Bottle', function () {
             });
             
             server.listen(PORT, function () {            
-                bottle.serve(function (request, response) {
+                bottle.serve(function (err, request, response) {
                     server.close();
                     should.equal(response.error, null);
                     response.bodyLength.should.equal(BODY.length);

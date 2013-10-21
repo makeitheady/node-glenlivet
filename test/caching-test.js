@@ -28,10 +28,10 @@ describe('Caching plugin', function () {
         });
         
         server.listen(PORT, function () {            
-            bottle.serve(function (request, response) {
+            bottle.serve(function (err, request, response) {
                 response.body.should.equal(BODY);     
                        
-                bottle.serve(function (request, response) {
+                bottle.serve(function (err, request, response) {
                     server.close();
                     response.body.should.equal(BODY);
                     nmrRequests.should.equal(1);
@@ -75,20 +75,20 @@ describe('Caching plugin', function () {
             bottle.serve({
                 foo: 'bar',
                 x: 3
-            }, function (request, response) {
+            }, function (err, request, response) {
                 response.body.should.equal('bar3');
                        
                 bottle.serve({
                     foo: 'bar',
                     x: 3
-                }, function (request, response) {
+                }, function (err, request, response) {
                     response.body.should.equal('bar3');
                     nmrRequests.should.equal(1);
                        
                     bottle.serve({
                         foo: 'test',
                         x: 2
-                    }, function (request, response) {
+                    }, function (err, request, response) {
                         server.close();
                         response.body.should.equal('test2');
                         nmrRequests.should.equal(2);
