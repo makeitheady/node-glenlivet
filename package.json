@@ -1,6 +1,6 @@
 {
   "name": "prolific-glenlivet",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A library that turns websites into data sources.",
   "main": "index.js",
   "directories": {
@@ -24,6 +24,7 @@
     "underscore": "~1.5.2",
     "MD5": "~1.1.0",
     "cheerio": "~0.12.2",
-    "jsdom": "~0.8.4"
+    "jsdom": "~0.8.4",
+    "express": "~3.4.3"
   }
 }
