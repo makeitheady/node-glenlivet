@@ -9,7 +9,10 @@
   "scripts": {
     "test": "make test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:prolificinteractive/node-glenlivet.git"
+  },
   "author": "",
   "license": "BSD",
   "readmeFilename": "README.md",
