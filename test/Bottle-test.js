@@ -194,7 +194,7 @@ describe('Bottle', function () {
     
     KvParamTest('Query params', 'get', 'qs');
     
-    KvParamTest('Post body params', 'post', 'post');
+    KvParamTest('Post body params', 'post', 'form');
 });
 
 module.exports = Bottle;

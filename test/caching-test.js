@@ -16,7 +16,7 @@ describe('Caching plugin', function () {
         var bottle = new Bottle({
             source: 'GET http://localhost:' + PORT,
             plugins: [
-                caching(cache, 'body')(10000)
+                caching(cache)('body', 10000)
             ]
         });
         
@@ -60,7 +60,7 @@ describe('Caching plugin', function () {
                 }
             },
             plugins: [
-                caching(cache, 'body')(10000)
+                caching(cache)('body', 10000)
             ]
         });
         
