@@ -12,12 +12,29 @@ var cache = new Cache(),
 
 sessionManager.save(session, function () {
     describe('Sessions plugin', function () {
+        it('should store meta against session', function (done) {
+            session.meta.foo = {
+                bar: 4
+            };
+
+            sessionManager.save(session);
+
+            sessionManager.read(session._id, function (err, session) {
+                session.meta.foo.bar.should.equal(4);
+                delete session.meta.foo;
+                sessionManager.save(session);
+                done();
+            });
+        });
+
         it('should store cookies against session', function (done) {
             var PORT = '10100';
         
             var bottle = new Bottle({
                 source: 'GET http://localhost:' + PORT,
-                plugins: [sessions]
+                plugins: [
+                    sessions(true)
+                ]
             });
         
             var app = express(),
